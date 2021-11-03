@@ -1,0 +1,4 @@
+Begin 
+	INPUT	a, b, c
+	
+END
