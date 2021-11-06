@@ -3,62 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Tạo form đơn giản</title>
+    <style>
+        th {
+            background-color: red;
+            font-size: 30px;
+            color: white;
+        }
+        td {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 <form>
-    <table style="width: 50%; background-color: aqua" border="1">
-        <th style="font-size: 50px"; bgcolor="red"> SỞ THÍCH CỦA BẠN</th>
+ <table>
+     <tr>
+         <th colspan="4"> SỞ THÍCH CỦA BẠN</th>
+     </tr>
+     <tr>
+         <td> Họ và tên</td>
+         <td colspan="3">
+             <input type="text" size="40" placeholder="yourname">
+         </td> <br>
+     </tr>
+     <tr>
+         <td> Email </td>
+         <td colspan="3">
+             <input type="text" placeholder="email">
+         </td>
+     </tr>
+     <tr>
+         <td> Sở thích</td>
 
-    <br>
- <tr>
+         <td> <label style="color: coral"> <input name="hobby" value="sport" type="checkbox"> Thể Thao </label> </td>
+         <td> <label style="color: coral" > <input name="hobby" value="music" type="checkbox"> Âm Nhạc </label> </td>
+         <td> <label style="color: coral"> <input name="hobby" value="read" type="checkbox"> Đọc Sách </label> </td>
+
+         <tr>
+
+         <td>
+     <td> <label style="color: coral"> <input name="hobby" value="search" type="checkbox" > Lướt Web </label> </td>
+     <td> <label style="color: coral"> <input name="hobby" value="game" type="checkbox"> Chơi Game </label> </td>
+     <td> <label style="color: coral"> <input name="hobby" value="movie" type="checkbox" > Điện Ảnh </label> </td>
+         </td>
+            </tr>
+
      <td>
-    <label  style="color: blue"> Họ và tên </label>
-    <input type="text" name="Hoten" placeholder="YourName" style="margin-left: 10px" size="50px">
+     <td> <label style="color: coral"> <input name="hobby" value="search" type="checkbox"> Du lịch </label> </td>
      </td>
- </tr>
-    <br>
-    <br>
-        <tr>
-            <td>
-    <label style="color: blue"> Email </label>
-    <input type="text" name="Email" placeholder="Email" style="margin-left: 34px">
-            </td>
-        </tr>
-    <br>
-    <br>
-        <tr>
-            <td>
-                <tr>
-        <td>
-    <label style="color: blue"> Sở thích :</label>
-    <input type="checkbox" name="hobby" style="margin-left: 20px; width: 30px"> <label style="color: coral" > Thể Thao </label>
-    <input type="checkbox" name="hobby" style="margin-left: 20px; width: 30px"> <label style="color: coral"> Âm Nhạc </label>
-    <input type="checkbox" name="hobby" style="margin-left: 20px; width: 30px"> <label style="color: coral"> Đọc Sách </label>
-        <br>
-            <tr>
-        <td>
-    <input type="checkbox" name="hobby" style="margin-left: 85px; width: 30px"> <label style="color: coral"> Lướt Web </label>
-    <input type="checkbox" name="hobby" style="margin-left: 30px"> <label style="color: coral"> Chơi Game </label>
-    <input type="checkbox" name="hobby" style="margin-left: 20px"> <label style="color: coral"> Điện Ảnh </label>
-        </td>
-    </tr>
-        <br>
-        <tr>
-            <td>
-    <input type="checkbox" name="hobby" style="margin-left: 75px; width: 50px"> <label style="color: coral"> Du Lịch </label>
-        </tr>
-        </td>
-            </td>
-        </tr>
-    <br>
-    <br>
-        <tr>
-            <td>
-    <input type="submit" value="Gửi Thông Tin" style="margin-left: 100px">
-    <input type="reset" value="Nhập Lại">
-            </td>
-        </tr>
-    </table>
+     </tr>
+     </tr>
+     <tr>
+         <td></td>
+         <td> <input type="submit" value="Gửi thông tin" name="q"> </td>
+         <td> <input type="reset" value="Nhập lại" name="q"> </td>
+     </tr>
+ </table>
 </form>
 </body>
 </html>
