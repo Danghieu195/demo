@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Table Simple</title>
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+        }
+        td,th {
+            border: 1px ;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: gold;
+        }
+    </style>
+
 </head>
 <body>
-<table style="font-family: sans-serif, Arial; border-collapse: collapse; width: 100px">
+<table>
     <tr>
         <th>Company</th>
         <th>Contact</th>
