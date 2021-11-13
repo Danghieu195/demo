@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Caculator</title>
+    <title>Calculator</title>
 
 </head>
 <body>
@@ -10,7 +10,7 @@
 <table>
     <tr>
         <td>
-            <h2>Caculator</h2>
+            <h2>Calculator</h2>
         </td>
     </tr>
     <tr>
@@ -38,7 +38,8 @@
 </table>
 </form>
 <!--<p id="result"></p>-->
- <label id="result"> </label>
+<!-- <label id="result"> Ket qua la :</label>-->
+<input type="text" id="f">
 <script>
     function Addition() {
         let a = document.getElementById('select1').value;
@@ -48,29 +49,35 @@
         let Result = a + b;
         //document.getElementById('result').innerHTML=Result
        //document.write('Result: ' + Result);
-        document.getElementById("result").innerHTML='Result: ' + Result;
-
+        // document.getElementById("result").innerHTML='Result Addition: ' + Result;
+        document.getElementById("f").value= 'Result Addition: ' + Result ;
     }function Subtraction() {
         let a = document.getElementById('select1').value;
         let b = document.getElementById('select2').value;
             a =parseInt(a);
             b =parseInt(b);
         let Result = a - b;
-        document.write('Result: ' + Result);
+       // document.write('Result: ' + Result);
+       // document.getElementById("result").innerHTML='Result Subtraction: ' + Result;
+        document.getElementById("f").value= 'Result Subtraction: ' + Result ;
     }function Multiplication() {
         let a = document.getElementById('select1').value;
         let b = document.getElementById('select2').value;
             a =parseInt(a);
             b =parseInt(b);
         let Result = a * b;
-        document.write('Result: ' + Result);
+        // document.write('Result: ' + Result);
+        // document.getElementById("result").innerHTML='Result Multiplication: ' + Result;
+        document.getElementById("f").value= 'Result Multiplication: ' + Result ;
     }function Division() {
         let a = document.getElementById('select1').value;
         let b = document.getElementById('select2').value;
             a =parseInt(a);
             b =parseInt(b);
         let Result = a / b;
-        document.write('Result: ' + Result);
+       // document.write('Result: ' + Result);
+       // document.getElementById("result").innerHTML='Result Division: ' + Result;
+        document.getElementById("f").value= 'Result Division: ' + Result ;
     }
 </script>
 </body>
