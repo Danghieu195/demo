@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+
+</head>
+<body>
+<form>
+<table>
+    <tr>
+        <td>
+            <h2>Caculator</h2>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="text" id="select1">
+        </td>
+        <td colspan="2">
+            <input type="text" id="select2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="Addition()">Addition(+)</button>
+        </td>
+        <td>
+            <button type="button" onclick="Subtraction()">Subtraction(-)</button>
+        </td>
+        <td>
+            <button type="button" onclick="Multiplication()">Multiplication(X)</button>
+        </td>
+        <td>
+            <button type="button" onclick="Division()">Division(/) </button>
+        </td>
+    </tr>
+</table>
+</form>
+<!--<p id="result"></p>-->
+ <label id="result"> </label>
+<script>
+    function Addition() {
+        let a = document.getElementById('select1').value;
+        let b = document.getElementById('select2').value;
+            a =parseInt(a);
+            b =parseInt(b);
+        let Result = a + b;
+        //document.getElementById('result').innerHTML=Result
+       //document.write('Result: ' + Result);
+        document.getElementById("result").innerHTML='Result: ' + Result;
+
+    }function Subtraction() {
+        let a = document.getElementById('select1').value;
+        let b = document.getElementById('select2').value;
+            a =parseInt(a);
+            b =parseInt(b);
+        let Result = a - b;
+        document.write('Result: ' + Result);
+    }function Multiplication() {
+        let a = document.getElementById('select1').value;
+        let b = document.getElementById('select2').value;
+            a =parseInt(a);
+            b =parseInt(b);
+        let Result = a * b;
+        document.write('Result: ' + Result);
+    }function Division() {
+        let a = document.getElementById('select1').value;
+        let b = document.getElementById('select2').value;
+            a =parseInt(a);
+            b =parseInt(b);
+        let Result = a / b;
+        document.write('Result: ' + Result);
+    }
+</script>
+</body>
+</html>
