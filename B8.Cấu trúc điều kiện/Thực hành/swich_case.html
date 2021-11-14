@@ -25,20 +25,43 @@
 
     //  Bài 2:
 
-    let a = prompt('moi nhap a');
-        a = parseInt(a);
-    switch (a) {
-        case 0:
-            alert('0');
-            break;
-        case 1:
-            alert('1');
-            break;
-        case 2:
-        case 3:
-            alert('2,3');
-            break;
-    }
+    // let a = prompt('moi nhap a');
+    //     a = parseInt(a);
+    // switch (a) {
+    //     case 0:
+    //         alert('0');
+    //         break;
+    //     case 1:
+    //         alert('1');
+    //         break;
+    //     case 2:
+    //     case 3:
+    //         alert('2,3');
+    //         break;
+    // }
+
+    // Bài 3:
+    // Cach 1:
+    // let giatri = prompt("moi nhap gia tri: ", 0);
+    //     giatri = parseInt(giatri);
+    //
+    //     if (giatri > 0) {
+    //         alert(1);
+    //     } else if ( giatri < 0){
+    //         alert(-1);
+    //     } else {
+    //         alert(0);
+    //     }
+    // Cach 2:
+    let value = prompt("moi nhap gia tri: ");
+    value = parseInt(value);
+
+       result = (value > 0) ? 1 :
+           (value < 0) ? -1 :
+       (value == 0) ? 0 :
+           'khong phai so';
+
+        alert(result);
 
 </script>
 </body>
