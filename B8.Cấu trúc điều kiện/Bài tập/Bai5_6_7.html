@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bai 5:Xếp hạng học lực của học sinh
+    let diemKiemTra = parseInt(prompt("Mời nhập điểm kiểm tra: "));
+    let diemThiGiuaKy = parseInt(prompt("Mời nhập điểm thi giữa kỳ: "));
+    let diemThiCuoiKy = parseInt(prompt("Mời nhập điểm thi cuối kỳ: "));
+    let average = (diemKiemTra + diemThiGiuaKy + diemThiCuoiKy) / 3;
+
+        if(average >= 9) {
+            alert("Học lực xuất xắc");
+        }else if (average >= 7 && average < 9) {
+            alert("Học lực giỏi");
+        }else if (average >= 5 && average < 7){
+            alert("Học lực khá");
+        }else{
+            alert("Học lực yếu");
+        }
+    // Bài 6: Tính hoa hồng nhận được tùy theo mức bán hàng
+</script>
+</body>
+</html>
