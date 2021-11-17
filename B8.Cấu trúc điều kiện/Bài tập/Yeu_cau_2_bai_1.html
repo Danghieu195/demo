@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Mời nhập số lương: "));
+     if (salary < 7){
+            thue = (salary*5) / 100;
+            alert("Sô tiền phải đóng thuế là: " + thue +"tr");
+     }else if (salary >= 7 && salary < 15){
+            thue = (salary*10) / 100;
+            alert("Số tiền phải đóng thuế là: " + thue +'tr');
+     }else{
+         thue = (salary*20) / 100;
+         alert("Số tiền phải đóng thuế: " + thue +"tr");
+     }
+</script>
+</body>
+</html>
