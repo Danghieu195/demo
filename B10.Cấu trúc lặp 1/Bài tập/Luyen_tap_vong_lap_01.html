@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1:
+    // for (let i = 1; i <= 100; i ++){
+    //     document.write(i + '<br>');
+    //     if ( i == 99) {
+    //         alert("Đã hoàn thành");
+    //     }
+    // }
+
+    // Bài 2:
+    // let nhietDo = parseInt(prompt("Mời nhập nhiệt độ"));
+    //
+    // while (nhietDo < 20 || nhietDo > 100 ) {
+    //     if (nhietDo > 100) {
+    //         alert("Yêu cầu giảm nhiệt độ ");
+    //         nhietDo = parseInt(prompt("Mời nhập nhiệt độ"));
+    //     } if (nhietDo < 20) {
+    //         alert("Yêu cầu tăng nhiệt độ ");
+    //         nhietDo = parseInt(prompt("Mời nhập nhiệt độ"));
+    //     }
+    // }
+    // alert("Nhiệt độ bình thường");
+
+    // Bài 3:
+    //     let a = 0;
+    //     let b = 1;
+    //     document.write(a + '<br>');
+    //     document.write(b + '<br>');
+    //     let c;
+    //     for ( let i = 1; i <= 18; i++){
+    //         c = a + b;
+    //         a = b;
+    //         b = c;
+    //         document.write(c + '<br>');
+    //     }
+
+    // Bài 4:
+    //         let a = 0;
+    //         let b = 1;
+    //         document.write(a + '<br>');
+    //         document.write(b + '<br>');
+    //         let c;
+    //         for (let i = 1; i <=10; i++){
+    //             c = a + b;
+    //             a = b;
+    //             b = c;
+    //             if (c % 5 == 0) {
+    //                 document.write(c + " là số fibonacci đầu tiên chia hết cho 5");
+    //                 break;
+    //             }
+    //         }
+
+    // Bài 5:
+    //     let a = 0;
+    //     let b = 1;
+    //     let c;
+    //     let sum;
+    //     // document.write(a + "<br>");
+    //     // document.write(b + "<br>");
+    //     for ( let i = 1; i <=20; i++){
+    //         c = a + b;
+    //         a = b;
+    //         b = c;
+    //         sum = b + c;
+    //     }
+    // document.write("Tổng của 20 số fibonacci là :" + sum);
+
+    // Bài 6:
+    //     let sum = 0;
+    //     for ( let i = 0; i <= 30; i++) {
+    //         if (i % 7 == 0){
+    //             sum = sum + i;
+    //             document.write(i + '<br>');
+    //         }
+    //     }
+    // document.write("tổng là: " + sum);
+
+    // Bài 7:
+
+        for ( let i = 1; i <= 100; i++){
+
+             if (i % 3 == 0 && i % 5 == 0){
+                document.write("fizzBuzz" + "<br>");
+            }else if ( i % 3 == 0) {
+                 document.write("fizz" + '<br>');
+             }else if (i % 5 == 0) {
+                 document.write("Buzz" + "<br>");
+             } else {
+                 document.write(i + "<br>");
+             }
+         }
+
+</script>
+</body>
+</html>
