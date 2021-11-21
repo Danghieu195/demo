@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: In dãy finonanci
+    // let a = 0;
+    // let b = 1;
+    // let c;
+    // let number = parseInt(prompt("Bạn muốn in bao nhiêu số finonanci? "));
+    // document.write("Dãy số finonanci mà bạn muôn in là : ");
+    //
+    // for ( let i = 1; i <= number; i++) {
+    //     document.write(a + "<br>");
+    //     c = a + b;
+    //     a = b;
+    //     b = c;
+    // }
+    // document.write(c + "<br>");
+
+    // Bài 2: Tính giai thừa của 1 số nguyên
+
+    // let number = parseInt(prompt("Mời nhập số mà bạn muốn tính giai thừa"));
+    // let giaiThua = 1;
+    // if (number == 0 || number == 1) {
+    //     alert("Số bạn vừa nhập có số giai thừa là: " + giaiThua);
+    // } else if (number < 0) {
+    //     alert("Error");
+    // }else {
+    //     for ( let i = 1; i <= number; i++) {
+    //         giaiThua = giaiThua * i;
+    //     }
+    // }
+    // document.write("Giai thừa của " + number + " = " + giaiThua);
+
+    // Bài 3:
+    for ( let i = 0; i < 5; i++) {
+        for ( let j = 0; j <= i; j++){
+            let sao = "*";
+            document.write(sao);
+        }
+        document.write("<br>");
+    }
+    document.write("<br><br><br>");
+
+    for (let i = 5; i > 0; i--){
+        for (let j = 0; j < i; j++){
+            let sao = "*"
+            document.write(sao)
+        }
+        document.write("<br>")
+    }
+
+
+</script>
+</body>
+</html>
