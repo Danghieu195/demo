@@ -5,8 +5,13 @@
     <title>Title</title>
 </head>
 <body>
+<!--     Bài 8: Game đoán số-->
+
+    <button onclick="play()" type="button"> Click to play </button>
+
 <script>
     // Bài 1:
+
     // for (let i = 1; i <= 100; i ++){
     //     document.write(i + '<br>');
     //     if ( i == 99) {
@@ -62,8 +67,6 @@
     //     let b = 1;
     //     let c;
     //     let sum;
-    //     // document.write(a + "<br>");
-    //     // document.write(b + "<br>");
     //     for ( let i = 1; i <=20; i++){
     //         c = a + b;
     //         a = b;
@@ -84,20 +87,46 @@
 
     // Bài 7:
 
-        for ( let i = 1; i <= 100; i++){
-
-             if (i % 3 == 0 && i % 5 == 0){
-                document.write("fizzBuzz" + "<br>");
-            }else if ( i % 3 == 0) {
-                 document.write("fizz" + '<br>');
-             }else if (i % 5 == 0) {
-                 document.write("Buzz" + "<br>");
-             } else {
-                 document.write(i + "<br>");
-             }
-         }
+        // for ( let i = 1; i <= 100; i++){
+        //
+        //      if (i % 3 == 0 && i % 5 == 0){
+        //         document.write("fizzBuzz" + "<br>");
+        //     }else if ( i % 3 == 0) {
+        //          document.write("fizz" + '<br>');
+        //      }else if (i % 5 == 0) {
+        //          document.write("Buzz" + "<br>");
+        //      } else {
+        //          document.write(i + "<br>");
+        //      }
+        //  }
 
     // Bài 8: Game đoán số
+
+    function play() {
+        let from = parseInt(prompt("Khoảng số bắt đầu từ: "));
+        let to = parseInt(prompt("Khoảng số kết thúc từ: "));
+        let soRandom = Math.floor(Math.random() * (to - from + 1) - from);
+        let numberUser;
+        let pass = false;
+
+        for ( let i = 0; i < 3 && !pass; i++) {
+            numberUser = parseInt(prompt("Mời bạn đoán số: "));
+            if (soRandom === numberUser) {
+                alert("Chien thang");
+                pass = true;
+            } else {
+                if (numberUser < soRandom) {
+                    alert("Số bạn đoán nhỏ hơn số ngẫu nhiên");
+                } else {
+                    alert("Số bạn đoán lớn hơn số ngẫu nhiên");
+                }
+            }
+        }
+        if ( pass === false) {
+            alert("Thua cuộc");
+        }
+    }
+
 
 
 </script>
