@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <table>
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <p> Mời nhập từ Tiếng Việt bạn cần dịch :  </p>-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <input type="text" onclick="vietnamese()" value="">-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <input type="button" onclick="dichtv()" value="Dịch">-->
+<!--                </td>-->
+<!--            </tr>-->
+
+
+            <tr>
+                <td>
+                    <p> Mời nhập từ Tiếng Anh bạn cần dịch :  </p>
+                </td>
+                <td>
+                    <input type="text" value="" id="tienganh">
+                </td>
+                <td>
+                    <input type="button" onclick="dichTa()" value="Translate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="tiengviet"> </p>
+                </td>
+            </tr>
+
+            <script>
+                let dictionaryE = ["Hello", "Good bye", "Good luck"];
+                let dictionaryV = ["Xin chào", "Tạm biệt", "Chúc may mắn"];
+                let result = "";
+                function dichTa() {
+                    let tienganh = document.getElementById('tienganh').value;
+                   // let tiengviet = document.getElementById('tiengviet');
+                    for ( let i = 0;i < dictionaryE.length;i++){
+                        let check = false;
+                        if (tienganh === dictionaryE[i]){
+                            result = dictionaryV[i];
+                            check = true;
+                            break;
+                        }
+                        // else if (tienganh === dictionaryE[0]){
+                        //     document.getElementById("tiengviet").innerText = dictionaryV[0];
+                        // }
+                    }
+                    if (check) {
+                        document.getElementById('tiengviet').innerHTML = result;
+                    } else {
+                        document.getElementById('tiengviet').innerText = "không tìm thấy kết quả";
+                    }
+                }
+            </script>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1:
+
+    // let myColor = ["Red","Green","White","Black"];
+    // document.write(myColor.join("+"));
+    // document.write("<br>");
+    // document.write(myColor.toString());
+
+    // Bài 2:
+
+    // let arr = new Array (10);
+    // let result = [arr[0]];
+    //
+    // for ( let i = 0; i < arr.length; i++) {
+    //     let numbers = parseInt(prompt("moi ban nhap day so tai i : " + i));
+    //     arr[i] = numbers;
+    // }
+    // document.write(arr.toString());
+    //
+    // for ( let i = 0; i < result.length; i++){
+    //     if (result[i-1] % 2 === 0 && (result[i] % 2 === 0)) {
+    //         result.push("-", arr[i]);
+    //     } else {
+    //         result.push(arr[i]);
+    //     }
+    // }
+    // document.write("<br>");
+    //  document.write(result.join(" "));
+
+     //Bai 3:
+
+    let str = "The Quick Brown Fox";
+    let inHoa = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let inThuong = "abcdefghijklmnopqrstuvwxyz";
+    let result = [];
+
+    for(let x = 0; x < str.length; x++)
+    {
+        if(inHoa.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(inThuong.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
+
+
+</script>
+</body>
+</html>
