@@ -36,16 +36,17 @@
                     <p id="tiengviet"> </p>
                 </td>
             </tr>
-
+        </table>
+    </form>
             <script>
                 let dictionaryE = ["Hello", "Good bye", "Good luck"];
                 let dictionaryV = ["Xin chào", "Tạm biệt", "Chúc may mắn"];
                 let result = "";
                 function dichTa() {
                     let tienganh = document.getElementById('tienganh').value;
-                   // let tiengviet = document.getElementById('tiengviet');
+                    let check;
                     for ( let i = 0;i < dictionaryE.length;i++){
-                        let check = false;
+                         check = false;
                         if (tienganh === dictionaryE[i]){
                             result = dictionaryV[i];
                             check = true;
@@ -62,7 +63,5 @@
                     }
                 }
             </script>
-        </table>
-    </form>
 </body>
 </html>
