@@ -45,8 +45,44 @@
     // }
     // document.write("Có " + dem + " số từ trong chuỗi");
 
-    // Bài 5:  
+    // Bài 5:  Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
 
+    // let a = [1,2,3,"a","b","c"];
+    // let b = [1,2,3,"a","b","c"];
+    // let dem = 0;
+    // for (let  i = 0; i < a.length; i++) {
+    //     for (let j = 0; j < b.length; j++) {
+    //         if (a[i] === b[j]) {
+    //             dem++;
+    //         }
+    //     }
+    // }
+    // if (dem === 0) {
+    //     document.write("Tất cả phần từ ở mảng a không giống với mảng b");
+    // } else {
+    //     document.write("Có " + dem + " phần từ của mảng a giống với mảng b");
+    // }
+
+    // Bài 6:Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+
+    // let str = [];
+    // let inputString = prompt("Mời bạn nhập kí tự");
+    // str = inputString;
+    // for (let j = 0; j < str.length; j++) {
+    //     if (str[j] === '-') {
+    //         str[j] = '_';
+    //     }
+    // }
+    // document.write(str.join(''));
+    let string = [];
+    let inputString = prompt('Nhập vào một mảng ký tự cách nhau bới "-" ').split('');
+    string = inputString;
+    for( let i = 0; i < string.length; i++){
+        if(string[i]==='-'){
+            string[i] = '_';
+        }
+    }
+    document.write(string.join(''));
 </script>
 </body>
 </html>

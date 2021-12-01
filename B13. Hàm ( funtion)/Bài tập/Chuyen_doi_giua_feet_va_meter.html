@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function feetToMeter(a) {
+            meter = 0.305 * a;
+            document.write("Số meter được chuyển đổi qua từ feet là : " + meter);
+        }
+
+        function meterToFeet(b) {
+            feet = 3.279 * b;
+            document.write("Số feet được chuyển đổi qua từ meter là : " + feet);
+        }
+
+        let soMeter =  parseFloat(prompt("Mời nhập số meter: " + "<br>"));
+        let soFeet =  parseFloat(prompt("Mời nhập số feet: "));
+        feetToMeter(soFeet);
+        meterToFeet(soMeter);
+
+    </script>
+</body>
+</html>

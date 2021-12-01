@@ -9,6 +9,7 @@
     // let nums = parseInt(prompt("Bạn muốn hiển thị bao nhiêu số? "));
     // let count = 0;
     // let number;
+
     // Cách 1:
 
     // let N = 0;
@@ -35,12 +36,13 @@
 
     let nums = parseInt(prompt("Bạn muốn hiển thị bao nhiêu số nguyên tố? "));
     let dem = 0;
+    let i = 1;
     let check;
 
     while (dem < nums) {
         check = true;
         for (let j = 2; j < i; j++) {
-            if (i % j == 0) {
+            if (i % j === 0) {
                 check = false;
             }
         }
