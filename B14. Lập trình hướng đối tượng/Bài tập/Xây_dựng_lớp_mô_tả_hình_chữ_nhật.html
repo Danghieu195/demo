@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(dai, rong) {
+            this.dai = dai;
+            this.rong = rong;
+        }
+        getDai() {
+            return this.dai;
+        }
+
+        setDai(dai) {
+            this.dai = dai;
+        }
+
+        getRong() {
+            return this.rong;
+        }
+
+        setRong(rong) {
+            this.rong = rong;
+        }
+
+        dienTich(){
+            return this.dai * this.rong;
+        }
+        chuVi(){
+            return (this.dai + this.rong) / 2;
+        }
+
+    }
+
+     let tinhToan = new Rectangle(2,4);
+     document.write("Diện tích hình chữ nhật là: " + tinhToan.dienTich());
+     document.write("<br>");
+     document.write("Chu vi hình chữ nhật là: " + tinhToan.chuVi());
+
+    tinhToan.setDai(4);
+    tinhToan.setRong(6);
+
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Diện tích hình chữ nhật 2 là: " + tinhToan.dienTich());
+    document.write("<br>");
+    document.write("Chu vi hình chữ nhật 2 là: " + tinhToan.chuVi());
+
+
+</script>
+</body>
+</html>
