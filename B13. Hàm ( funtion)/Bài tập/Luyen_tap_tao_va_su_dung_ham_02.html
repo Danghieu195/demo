@@ -51,7 +51,111 @@
    // Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
     // Nếu là ký tự số hàm trả về true, ngược lại trả về false.
 
-    
+    // function kiTu(n){
+    //     if (!isNaN(n)) {
+    //         alert("True");
+    //     } else {
+    //         alert("False");
+    //     }
+    // }
+    // let number = parseInt(prompt("Mời nhập vào 1 ký tự: "));
+    //  let checkKyTu = kiTu(number);
+    // document.write(checkKyTu);
+
+    // Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+
+    // let array = [];
+    // for (i = 0; i < 3; i++) {
+    //     array[i] = parseInt(prompt("Mời nhập số nguyên thứ " + (i + 1)));
+    // }
+    //
+    //  function findMin(arr) {
+    //      let min = arr[0];
+    //      for ( let i = 0; i < arr.length; i++) {
+    //         if ( min > arr[i]) {
+    //             min = arr[i];
+    //         }
+    //      }
+    //      return min;
+    //  }
+    // let result = findMin(array);
+    // document.write(" Số nhỏ nhất trong 3 số bạn vừa nhập là: " + result);
+
+    // Bài 6:Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    // Nếu là nguyên dương trả về true, ngược lại trả về false.
+
+    // function checkNumber(n) {
+    //     if ( n < 0) {
+    //         alert("False");
+    //     } else {
+    //         alert("True");
+    //     }
+    // }
+    // let number = parseInt(prompt("Mời nhập 1 số nguyên: "));
+    // let result = checkNumber(number);
+    // document.write("Số bạn vừa nhập là: " + number);
+
+    // Bài 7 : Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+
+    // function change(num1,num2){
+    //     let arr = [];
+    //     let num0 = num1;
+    //     num1=num2;
+    //     num2=num0;
+    //     arr[0] = num1;
+    //     arr[1] = num2;
+    //     return arr;
+    // }
+    // let number1 = parseInt(prompt('Nhập số thứ nhất'));
+    // let number2 = parseInt(prompt('Nhập số thứ 2'));
+    // let result = change(number1,number2);
+    // document.write(result);
+
+    // Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    // đảo ngược : reverse
+
+    // let array = [];
+    // for ( let i = 0; i < 4; i++) {
+    //     array[i] = parseInt(prompt("Mời nhập số nguyên"));
+    // }
+    // document.write(array);
+    // document.write("<br>");
+    //
+    // function arr(n) {
+    //     n = n.reverse();
+    //     return n;
+    // }
+    // let result = arr(array);
+    // document.write(result);
+
+    // Bài 9:Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+
+    let a = [];
+    let str = prompt("Enter a sentence: ").split(" ");
+    a = str;
+
+    function checkStr (arr) {
+        let n = 0;
+        for ( let i = 0; i < a.length; i++) {
+            if ( arr === a[i]) {
+                n++;
+            }
+        }
+        if ( n === 0) {
+            return -1;
+        }else {
+            return n;
+        }
+    }
+
+    let string = prompt("mời nhập 1 ký tự : ");
+    let check = checkStr(string);
+    if (check === -1) {
+        document.write("Ký tự bạn nhập không  có trong mảng");
+    } else {
+        document.write("Ký tự bạn nhập xuất hiện " + check + " lần trong mảng " );
+    }
 
 </script>
 </body>
