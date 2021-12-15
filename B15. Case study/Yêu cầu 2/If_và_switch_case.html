@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1 : viết chương trình để nhập lương nhân viên
+    //          Tình thuế thu nhập và lương ròng
+    //          20% nếu lương 15 triệu; 10% nếu lương 7 đến 15 triệu; 5% nếu dưới 7 triệu
+
+    //     let salary = parseInt(prompt("Mời nhập số tiền lương của bạn: "));
+    //     let salaryAfter;
+    //     if (salary === 15) {
+    //         salaryAfter = salary - ( salary * 0.2);
+    //
+    //     } else if ( salary < 15 || salary > 7) {
+    //
+    //         salaryAfter = salary - ( salary * 0.1);
+    //     } else {
+    //
+    //         salaryAfter = salary - ( salary * 0.05);
+    //     }
+    // document.write("Số tiền lương sau khi tính thuế là : " + salaryAfter + " triệu");
+
+    // Bài 2: kiểm tra 1 ký tự là nguyên âm hay phụ âm
+
+    let kyTu = prompt("Mời nhập 1 ký tự: ");
+    switch (kyTu) {
+        case ("o"):
+        case ("u"):
+        case ("i"):
+        case ("a"):
+        case ("O"):
+        case ("U"):
+        case ("I"):
+        case ("A"):
+        case ("E"):
+            document.write("Ký tự bạn vừa nhập là một nguyên âm");
+            break;
+            default:
+            document.write("Ký tự bạn vừa nhập là một phụ âm");
+    }
+</script>
+</body>
+</html>

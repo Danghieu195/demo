@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Iphone 13</th>
+        <th>iphoneX</th>
+    </tr>
+    <tr>
+        <td> draft <input type="text" size="20" id="spam13"></td>
+        <td> draft <input type="text" size="20" id="spamX"></td>
+    </tr>
+    <tr>
+        <td> inbox <input type="text" size="20" id="inbox13"></td>
+        <td> inbox <input type="text" size="20" id="inboxX"></td>
+    </tr>
+    <tr>
+        <td>
+            <button id="sent13" onclick="sentMess13()">Sent</button>
+        </td>
+        <td>
+            <button id="sentX" onclick="sentMessX()">Sent</button>
+        </td>
+    </tr>
+
+</table>
+<script>
+    class myMoblie {
+        constructor(battery, draft, inbox, sent, status) {
+            this.battery = battery;
+            this.draft = draft;
+            this.inbox = inbox;
+            this.sent = sent;
+            this.status = status;
+        }
+        checkStatus () {
+            if (this.status) {
+                document.write("The mobile phone is ON");
+            } else{
+                document.write("The mobile phone is OFF");
+            }
+            this.battery--;
+        }
+
+        turnON () {
+            this.status = true;
+            this.battery--;
+        }
+
+        turnOFF () {
+            this.status = false;
+            this.battery--;
+        }
+
+        setBattery (battery) {
+            this.battery = battery;
+        }
+
+        setMessageDraft (message){
+            if (this.status) {
+                this.draft = message;
+                this.battery--;
+            } else {
+                document.write("The mobile is OFF");
+            }
+        }
+
+        receiveMessages(message){
+            if(this.status){
+                this.inbox = message;
+                this.battery--;
+            } else {
+                document.write("The mobile is OFF");
+            }
+        }
+
+        sendMessage(mobile){
+            if(this.status){
+                this.sent.push(this.draft);
+               // mobile.receiveMessages(this.draft);
+                 mobile.inbox = this.draft;
+                this.draft = "";
+                this.battery--;
+            } else {
+                document.write("The mobile is OFF");
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

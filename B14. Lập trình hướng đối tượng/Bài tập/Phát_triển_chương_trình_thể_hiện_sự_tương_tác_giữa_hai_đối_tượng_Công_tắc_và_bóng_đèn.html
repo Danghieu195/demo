@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+  class ElectricLamp{
+    constructor (status) {
+      this.status = false;
+    }
+
+    getStatus(){
+      return this.status;
+    }
+
+    setStatus(status){
+      this.status = status;
+    }
+
+    turnOn(){
+      this.status = true;
+      document.write("Bật đèn" + "<br>");
+    }
+
+    turnOff(){
+      this.status = false;
+      document.write("Tắt đèn" + "<br>");
+    }
+  }
+  class SwitchButton{
+    constructor(status, lamp){
+      this.status = false;
+      this.lamp = lamp;
+    }
+    getStatus(){
+      return this.status;
+    }
+    setStatus(status){
+      this.status = status;
+    }
+    connectToLamp(electriclamp){
+      this.lamp = electriclamp;
+    }
+    switchOff(){
+      this.status = false;
+      document.write("Tắt công tắc" + "<br>");
+      this.lamp.turnOff();
+    }
+    switchOn(){
+      this.status = true;
+      document.write("Bật công tắt" + "<br>");
+      this.lamp.turnOn();
+    }
+  }
+
+  let switchButton = new SwitchButton(false);
+  let lamp = new ElectricLamp(false);
+  switchButton.connectToLamp(lamp);
+  document.write("Trạng thái của bóng đèn: " + lamp.status + "<br>");
+  document.write("Trạng thái của công tắc: " + switchButton.status + "<br>");
+  switchButton.switchOn();
+  document.write("Trạng thái của bóng đèn: " + lamp.status + "<br>");
+  document.write("Trạng thái của công tắc: " + switchButton.status + "<br>");
+
+</script>
+
+</body>
+
+
+</html>

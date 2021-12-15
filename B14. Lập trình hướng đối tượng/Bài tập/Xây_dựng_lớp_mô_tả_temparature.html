@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class temperature {
+        constructor(celcius) {
+            this.celcius = celcius;
+        }
+        cToF () {
+            return this.celcius * 1.8 + 32;
+        }
+
+        cToK () {
+            return this.celcius + 273.15;
+        }
+    }
+    let c = new temperature(25);
+    document.write("25 độ C chuyển sang độ F là : " + c.cToF());
+    document.write("<br>");
+    document.write("25 độ C chuyển sang độ K là : " + c.cToK());
+</script>
+
+</body>
+</html>

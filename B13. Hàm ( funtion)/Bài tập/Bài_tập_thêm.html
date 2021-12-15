@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function maxMinAvg(arr) {
+    //     //your code here
+    //     let arrnew = [];
+    //     //let avg = 0;
+    //     let max = arr[0];
+    //     let min = arr[0];
+    //     let sum = 0;
+    //
+    //     for ( let i = 0; i < arr.length; i++) {
+    //         if ( max < arr[i] ) {
+    //             max = arr[i];
+    //         }
+    //     }
+    //     arrnew.push(max);
+    //
+    //     for ( let i = 0; i < arr.length; i++) {
+    //         if ( min > arr[i]) {
+    //             min = arr[i];
+    //         }
+    //     }
+    //     arrnew.push(min);
+    //
+    //     for ( let i = 0; i < arr.length; i++) {
+    //         sum = sum + arr[i];
+    //     }
+    //     let avg = sum / arr.length;
+    //     arrnew.push(avg);
+    //
+    //     return arrnew;
+    // }
+    //
+    // let array = [11,5,15,-2];
+    // let arrnew = maxMinAvg(array);
+    // document.write(arrnew);
+    // function swap(arr) {
+    //     //your code here
+    //     let arrnew = [];
+    //     let a = arr[0];
+    //     arr[0] = arr[arr.length-1];
+    //     arr[arr.length-1] = a;
+    //     arrnew.push(arr);
+    //     return arrnew;
+    // }
+    // let array = [1,2,3,4];
+    // let arrnew = swap(array);
+    // document.write(arrnew);
+    // msg = 'codegym';
+    // for(var x = -2; x < msg.length - 2; x++)
+    // {
+    //     if(msg.length === 3)
+    //     {
+    //         for (let i = 2; i < 7; i++)
+    //         {
+    //             console.log(i);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         for (let i = msg.length;  i > (msg.length - 2); i--)
+    //         {
+    //             console.log(i);
+    //         }
+    //     }
+    // }
+
+
+    function compareTriplets(a, b) {
+        // Write your code here
+        let finalArray = [];
+        let dem1 = 0;
+        let dem2 = 0;
+        for ( let i = 0;i < a.length; i++ ) {
+                if ( a[i] > b[i]) {
+                    dem1++;
+                } else if ( a[i] < b[i]) {
+                    dem2++;
+                }
+            }
+        finalArray[0] = dem1;
+        finalArray[1] = dem2;
+        return finalArray;
+    }
+    compareTriplets([5,6,7], [6,6,8]);
+    console.log(finalArray);
+</script>
+</body>
+</html>

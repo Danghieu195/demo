@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: vẽ hình chữ nhật rỗng
+
+    let chieuRong = 6;
+    let chieuDai = 5;
+    for( let i = 1; i <= chieuRong; i++) {
+        for (let j = 1; j <= chieuDai; j++) {
+            if ( i === 1 || j === 1 || i === chieuRong || j === chieuDai) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        // document.write("<br>");
+         document.write("<br>");
+    }
+
+    // Bài 2: Vẽ tam giác vuông cân rỗng có chiều cao h = 5.
+
+    // const h = 5;
+    //
+    // for (let i = 0; i <= h; i++) {
+    //
+    //     document.write("*");
+    //     for (let j = 1; j <= i; j++){
+    //
+    //          if ( i === h || i === j) {
+    //              document.write("*");
+    //          } else {
+    //              document.write("&nbsp;&nbsp");
+    //          }
+    //     }
+    //     document.write("<br>");
+    //     document.write("<br>");
+    // }
+
+
+    // Bài 3 + Bài 4 : vẽ hình tam giác cân đặc và rỗng có chiều cao h = 5
+
+    // const a = 5;
+    // for ( let i = 1; i <= a; i++) {
+    //     for ( let k = a; k > i; k-- ){
+    //         document.write("&nbsp;&nbsp");
+    //     }
+    //     for (let j = 1; j <= i * 2 - 1; j++) {
+    //         document.write("*"); // tam giác cân đặc
+    //
+    //         // if ( i === 1 || i === a || j === 1 || j === i * 2 - 1) {     // Tam giác cân rỗng
+    //         //     document.write("*");
+    //         // }
+    //         // } else {
+    //         //     document.write("&nbsp;&nbsp");
+    //         // }
+    //     }
+    //     document.write("<br>");
+    // }
+
+</script>
+</body>
+</html>
