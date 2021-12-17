@@ -59,7 +59,7 @@
             return this.weight;
         }
 
-        setName(weight) {
+        setWeight(weight) {
             this.weight = weight;
         }
 
@@ -86,15 +86,21 @@
     document.write("<br>");
     document.write(apple.getWeight());
 
+
+
     for (let i = 0; i < 9; i++) {
         human1.eat(apple);
     }
+    document.write("<br>");
     document.write(human1.getWeight());
     document.write("<br>");
     document.write(apple.getWeight());
+    document.write("<br>");
 
     console.log(apple.isEmpty());
     console.log(human1.checkApple(apple));
+
+    human1.say("hello");
 
 </script>
 </html>

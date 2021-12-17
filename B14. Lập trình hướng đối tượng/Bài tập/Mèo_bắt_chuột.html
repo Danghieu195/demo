@@ -5,6 +5,130 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    class Rat{
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+        getWeight() {
+            return this.weight;
+        }
 
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        getName(){
+            return this.name;
+        }
+        setName(name) {
+            this.name = name;
+        }
+
+        getSpeed() {
+            return this.speed = speed;
+        }
+
+        setSpeed(speed) {
+            this.speed = speed;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setStatus (status) {
+            this.status = status;
+        }
+
+        call(){
+            document.write(" chit chit");
+        }
+    }
+
+    class Cat {
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        getName(){
+            return this.name;
+        }
+        setName(name) {
+            this.name = name;
+        }
+
+        getSpeed() {
+            return this.speed = speed;
+        }
+
+        setSpeed(speed) {
+            this.speed = speed;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        call(){
+            document.write(" meo meo");
+        }
+
+        catchRat(rat) {
+            if ( this.speed > rat.speed) {
+                document.write("Bắt được mày rồi nhé!");
+            } else {
+                document.write("Đố mày bắt được tao");
+            }
+        }
+
+        eatRat(rat) {
+            if (rat.status) {
+                this.weight = this.weight + rat.weight;
+                // rat.status = false;
+                document.write("Ngon !!");
+            }else {
+                document.write("Không ăn");
+            }
+        }
+    }
+
+    let jerry = new Rat("jerry", 10, 100, false);
+    let tom = new Cat("tom", 40, 110);
+
+    tom.catchRat(jerry);
+    document.write("<br>");
+
+    tom.setSpeed(90);
+    tom.catchRat(jerry);
+
+    document.write("<br>");
+    document.write("<br>");
+
+    tom.eatRat(jerry);
+    jerry.setStatus(true);
+    document.write("<br>");
+    tom.eatRat(jerry);
+
+    tom.setSpeed(110);
+    document.write("<br>");
+    tom.catchRat(jerry);
+
+
+
+</script>
 </body>
 </html>
