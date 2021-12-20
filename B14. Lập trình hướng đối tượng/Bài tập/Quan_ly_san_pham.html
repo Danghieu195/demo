@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<table cellpadding="5" cellspacing="0" border="2">
+    <tr>
+        <th style="text-align: left" colspan="2"> Add new product </th>
+    </tr>
+  <tr>
+    <td>
+      <input type="text" placeholder="New Product" id="newProduct">
+    </td>
+    <td>
+        <button type="button" id="addNewProduct" onclick="add()"> Add </button>
+    </td>
+  </tr>
+</table>
+<p id="demo"> </p>
+
+<script>
+    let productList = ['Sony Xperia', 'Samsung Galaxy', 'Nokia 6', 'Xiaomi Redmi Note 4', "Apple iphone 6S", "Xiaomi Mi 5s Plus", "Apple iphone 8 Plus", "Fujitsu F-04E", "Oppo A71"];
+    display();
+
+    function display() {
+        let tableString = "<table cellpadding='5' cellspacing='0' border='2'>" + "<tr><th colspan='4' style='text-align: left'> Display All Product</th></tr>" +
+            "<tr>" +
+            "<td colspan='3'> Product Name</td>" +
+            "<td>" + productList.length + " product" + "</td>" +
+            "</tr>";
+        for (let i = 0; i < productList.length; i++) {
+            tableString += "<tr>" +
+                "<td>" + productList[i] + "</td>" +
+                "<td>" + "<input type='button' value='Edit' onclick='editProduct("+i+")'>" + "</td>" +
+                "<td>" + "<input type='button' value='Delete' onclick='deleteProduct("+i+")'>" + "</td>" +
+                "</tr>";
+        }
+        // tableString += "</table>";
+        document.getElementById("demo").innerHTML = tableString;
+    }
+
+    // Gọi hàm thêm sản phẩm vào
+    function add() {
+        let addNew = true;
+        let newProduct = document.getElementById("newProduct").value;
+        if (newProduct !== "") {
+            for (let i = 0; i < productList.length; i++) {
+                if (newProduct === productList[i]) {
+                    addNew = false;
+                    break;
+                }
+            }
+        } else {
+            addNew = false;
+        }
+
+        if (addNew) {
+            productList.push(newProduct);
+            display();
+        } else {
+            alert("Please check the name of product!");
+        }
+
+        document.getElementById("newProduct").value = "";
+    }
+
+    // Goị hàm chỉnh sửa tên sản phẩm
+    function editProduct(index){
+        let newName = prompt("Enter the name of product you want to edit");
+        if ( newName !=="" && newName!== productList[index]) {
+            newName === productList[index];
+        }
+        display();
+    }
+
+    // Gọi hàm xóa tên sản phẩm
+    function deleteProduct(index){
+        let conf = confirm("Are you sure to delete this product?");
+        if (conf) {
+            productList.splice(index,1);
+        }
+        display();
+    }
+</script>
+</body>
+</html>

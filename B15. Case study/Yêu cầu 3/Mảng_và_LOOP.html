@@ -5,83 +5,120 @@
     <title>Title</title>
 </head>
 <body>
+<!--<script>-->
+<!--    // Bài 1: prefix sum-->
+
+<!--    // let number = parseInt(prompt("Bạn muốn nhập bao nhiêu số nguyên: "));-->
+<!--    // let a = [];-->
+<!--    // for (let k = 0; k < number; k++ ) {-->
+<!--    //     a[k] = parseInt(prompt("Các số nguyên trong mảng là: "));-->
+<!--    // }-->
+<!--    // // let b = [];-->
+<!--    // let sum = 0;-->
+<!--    // for ( let i = 0; i < a.length; i++) {-->
+<!--    //     sum = sum + a[i];-->
+<!--    //     a[i] = sum;-->
+<!--    // }-->
+<!--    // document.write(a);-->
+
+<!--   // Bài 2: In ra một mảng C được sắp xếp các phần tử xuất hiện trong A nhưng không xuất hiện trong B.-->
+
+<!--    // let arrayB = [7,2,5,4,6,3,5,3];-->
+<!--    // let arrayA = [7,2,5,3,5,3];-->
+<!--    // function missingValue(A, B) {-->
+<!--    //-->
+<!--    //     for (let i = 0; i < A.length; i++) {-->
+<!--    //         for (let j = 0; j < B.length; j++) {-->
+<!--    //             if (A[i] === B[j]) {-->
+<!--    //                 B.splice(j,1);      // .splice(vị trí cần xóa, xóa 1 phần tử);-->
+<!--    //                 break;-->
+<!--    //             }-->
+<!--    //         }-->
+<!--    //     }-->
+<!--    //         B.sort(function (a, b) { // Sắp xếp-->
+<!--    //             return a - b;-->
+<!--    //         })-->
+<!--    //         return B;-->
+<!--    //     }-->
+<!--    // let result = missingValue(arrayA,arrayB);-->
+<!--    // document.write(result);-->
+
+<!--    // Bài 4: Viết một chương trình nhập vào một dãy số từ bàn phím và in ra màn hình bằng chữ.-->
+
+<!--//     let a = "";-->
+<!--//  a = parseInt(prompt("mời nhập số: "));-->
+<!--//  array = a.split('');-->
+<!--// console.log(array);-->
+<!--//     let str = prompt("Mời nhập dãy số: ");-->
+<!--//     let arr = str.split('');-->
+<!--//     document.write(arr);-->
+<!--//     document.write("<br>");-->
+<!--//     for ( let i = 0 ; i <= arr.length; i++) {-->
+<!--//         switch (arr[i]) {-->
+<!--//             case ("1"):-->
+<!--//                 document.write("Một");-->
+<!--//                 break;-->
+<!--//             case ('2'):-->
+<!--//                 document.write("Hai");-->
+<!--//                 break;-->
+<!--//             case ('3'):-->
+<!--//                 document.write("Ba");-->
+<!--//                 break;-->
+<!--//             case ('4'):-->
+<!--//                 document.write("Bốn");-->
+<!--//                 break;-->
+<!--//             case ('5'):-->
+<!--//                 document.write("Năm");-->
+<!--//                 break;-->
+<!--//             case ('6'):-->
+<!--//                 document.write("Sáu");-->
+<!--//                 break;-->
+<!--//             case ('7'):-->
+<!--//                 document.write("Bảy");-->
+<!--//                 break;-->
+<!--//             case ('8'):-->
+<!--//                 document.write("Tám");-->
+<!--//                 break;-->
+<!--//             case ('9'):-->
+<!--//                 document.write("Chín");-->
+<!--//                 break;-->
+<!--//         }-->
+<!--//     }-->
+
+<!--    // Bai 5: Tạo một menu-->
+
+
+
+<!--</script>-->
+<form>
+    <table>
+        <tr>
+<ol>
+    <li onclick="cafe()" id="demo" > Cafe</li>
+    <li onclick="camVat()" id="demo1"> Cam vắt</li>
+<!--    <li onclick="caChua()"> Nước ép cà chua</li>-->
+<!--    <li onclick="caRot()"> Nước ép cà rốt</li>-->
+<!--    <li onclick="nuocLoc()"> Nước lọc</li>-->
+<!--    <li onclick="nuocDua"> Nước dừa</li>-->
+<!--    <li onclick="out()"> Thoát gọi món</li>-->
+</ol>
+    </table>
+</form>
+
 <script>
-    // Bài 1: prefix sum
+    let i = 0;
 
-    // let number = parseInt(prompt("Bạn muốn nhập bao nhiêu số nguyên: "));
-    // let a = [];
-    // for (let k = 0; k < number; k++ ) {
-    //     a[k] = parseInt(prompt("Các số nguyên trong mảng là: "));
-    // }
-    // // let b = [];
-    // let sum = 0;
-    // for ( let i = 0; i < a.length; i++) {
-    //     sum = sum + a[i];
-    //     a[i] = sum;
-    // }
-    // document.write(a);
+        function cafe() {
+            document.getElementById('demo').innerHTML = "Cafe có giá là 12k";
+            alert("Bạn muốn order bao nhiêu ly:  ");
+            document.write("Số tiền bạn phải thanh toán là: ");
 
-    // Bài 2: In ra một mảng C được sắp xếp chắc các phần tử xuất hiện trong A nhưng không xuất hiện trong B.
-    // let arrayB = [7,2,5,4,6,3,5,3];
-    // let missingValueAB = [];
-    //
-    // for (let i = 0; i < arrayA.length; i++) {
-    //     for (let j = 0; j < arrayB.length; j++) {
-    //
-    //         if (arrayA[i] === arrayB[j]) {
-    //             missingValueAB = [];
-    //         } else {
-    //             missingValueAB =
-    //         }
-    //     }
-    // }
+        }
 
-    // Bài 4: Viết một chương trình nhập vào một dãy số từ bàn phím và in ra màn hình bằng chữ.
+        function camVat() {
+            document.getElementById('demo1').innerHTML = "Cam vắt có giá là 20k";
+        }
 
-    // let number = parseInt(prompt("Bạn muốn nhập bao nhiêu số nguyên: "));
-    // let a = [];
-    // for ( let i = 0; i < number; i++) {
-    //     a[i] = parseInt(prompt("Các số nguyên trong mảng là: "));
-    // }
-//     let a = "";
-//  a = parseInt(prompt("mời nhập số: "));
-//  array = a.split('');
-// console.log(array);
-//     let str = prompt("Mời nhập dãy số: ");
-//     let arr = str.split('');
-//     document.write(arr);
-//     document.write("<br>");
-//     for ( let i = 0 ; i <= arr.length; i++) {
-//         switch (arr[i]) {
-//             case ("1"):
-//                 document.write("Một");
-//                 break;
-//             case ('2'):
-//                 document.write("Hai");
-//                 break;
-//             case ('3'):
-//                 document.write("Ba");
-//                 break;
-//             case ('4'):
-//                 document.write("Bốn");
-//                 break;
-//             case ('5'):
-//                 document.write("Năm");
-//                 break;
-//             case ('6'):
-//                 document.write("Sáu");
-//                 break;
-//             case ('7'):
-//                 document.write("Bảy");
-//                 break;
-//             case ('8'):
-//                 document.write("Tám");
-//                 break;
-//             case ('9'):
-//                 document.write("Chín");
-//                 break;
-//         }
-//     }
 
 </script>
 </body>
