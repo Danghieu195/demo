@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1:
+    function theCorrectName(name) {
+        name = name.trim().toLowerCase(); // Hàm trim() dùng để xóa các dấu cách xung quanh
+        let nameArr = Array.from(name);// Hàm from() dùng để chuyển chuỗi name thành mảng.
+
+        for (let i = 0; i < nameArr.length; i++) {
+            if (nameArr[i] === " " && nameArr[i + 1] === " ") {
+                for (let j = i + 1; j < nameArr.length - 1; j++) { // Biến j nằm sau biến i để chèn lên phía trên.
+                    nameArr[j] = nameArr[j + 1];
+                }
+                i--;
+                nameArr.pop();
+            }
+        }
+
+        nameArr[0] = nameArr[0].toUpperCase();
+        for ( let i = 0; i < nameArr.length - 1; i++) {
+            if (nameArr[i] === " ") {
+                nameArr[i + 1] = nameArr[i + 1].toUpperCase();
+            }
+        }
+        return nameArr.join("");
+    }
+    function maxlength(name) {
+        let nameArray = name.split(" ");
+        let maxName = nameArray[0];
+        for ( let i = 1; i < nameArray.length; i++){
+            if ( maxName.length < nameArray[i].length){
+                maxName = nameArray[i];
+            }
+        }
+        return maxName;
+    }
+
+    let name = prompt("Mời nhập vào một cái tên: ");
+    document.write(" Tên ban đầu là : " + name);
+    document.write("<br>");
+    document.write(" Tên chuẩn hóa là : " + theCorrectName(name));
+    document.write("<br>");
+    document.write(" Từ có độ dài lớn nhất là : " + maxlength(theCorrectName(name)));
+
+
+    // theCorrectName("nGUYen    DaNg  HIeU");
+    // console.log(name);
+
+
+    // Bài 2:
+</script>
+</body>
+</html>

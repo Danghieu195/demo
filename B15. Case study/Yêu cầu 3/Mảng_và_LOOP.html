@@ -5,119 +5,160 @@
     <title>Title</title>
 </head>
 <body>
-<!--<script>-->
-<!--    // Bài 1: prefix sum-->
-
-<!--    // let number = parseInt(prompt("Bạn muốn nhập bao nhiêu số nguyên: "));-->
-<!--    // let a = [];-->
-<!--    // for (let k = 0; k < number; k++ ) {-->
-<!--    //     a[k] = parseInt(prompt("Các số nguyên trong mảng là: "));-->
-<!--    // }-->
-<!--    // // let b = [];-->
-<!--    // let sum = 0;-->
-<!--    // for ( let i = 0; i < a.length; i++) {-->
-<!--    //     sum = sum + a[i];-->
-<!--    //     a[i] = sum;-->
-<!--    // }-->
-<!--    // document.write(a);-->
-
-<!--   // Bài 2: In ra một mảng C được sắp xếp các phần tử xuất hiện trong A nhưng không xuất hiện trong B.-->
-
-<!--    // let arrayB = [7,2,5,4,6,3,5,3];-->
-<!--    // let arrayA = [7,2,5,3,5,3];-->
-<!--    // function missingValue(A, B) {-->
-<!--    //-->
-<!--    //     for (let i = 0; i < A.length; i++) {-->
-<!--    //         for (let j = 0; j < B.length; j++) {-->
-<!--    //             if (A[i] === B[j]) {-->
-<!--    //                 B.splice(j,1);      // .splice(vị trí cần xóa, xóa 1 phần tử);-->
-<!--    //                 break;-->
-<!--    //             }-->
-<!--    //         }-->
-<!--    //     }-->
-<!--    //         B.sort(function (a, b) { // Sắp xếp-->
-<!--    //             return a - b;-->
-<!--    //         })-->
-<!--    //         return B;-->
-<!--    //     }-->
-<!--    // let result = missingValue(arrayA,arrayB);-->
-<!--    // document.write(result);-->
-
-<!--    // Bài 4: Viết một chương trình nhập vào một dãy số từ bàn phím và in ra màn hình bằng chữ.-->
-
-<!--//     let a = "";-->
-<!--//  a = parseInt(prompt("mời nhập số: "));-->
-<!--//  array = a.split('');-->
-<!--// console.log(array);-->
-<!--//     let str = prompt("Mời nhập dãy số: ");-->
-<!--//     let arr = str.split('');-->
-<!--//     document.write(arr);-->
-<!--//     document.write("<br>");-->
-<!--//     for ( let i = 0 ; i <= arr.length; i++) {-->
-<!--//         switch (arr[i]) {-->
-<!--//             case ("1"):-->
-<!--//                 document.write("Một");-->
-<!--//                 break;-->
-<!--//             case ('2'):-->
-<!--//                 document.write("Hai");-->
-<!--//                 break;-->
-<!--//             case ('3'):-->
-<!--//                 document.write("Ba");-->
-<!--//                 break;-->
-<!--//             case ('4'):-->
-<!--//                 document.write("Bốn");-->
-<!--//                 break;-->
-<!--//             case ('5'):-->
-<!--//                 document.write("Năm");-->
-<!--//                 break;-->
-<!--//             case ('6'):-->
-<!--//                 document.write("Sáu");-->
-<!--//                 break;-->
-<!--//             case ('7'):-->
-<!--//                 document.write("Bảy");-->
-<!--//                 break;-->
-<!--//             case ('8'):-->
-<!--//                 document.write("Tám");-->
-<!--//                 break;-->
-<!--//             case ('9'):-->
-<!--//                 document.write("Chín");-->
-<!--//                 break;-->
-<!--//         }-->
-<!--//     }-->
-
-<!--    // Bai 5: Tạo một menu-->
-
-
-
-<!--</script>-->
-<form>
-    <table>
-        <tr>
-<ol>
-    <li onclick="cafe()" id="demo" > Cafe</li>
-    <li onclick="camVat()" id="demo1"> Cam vắt</li>
-<!--    <li onclick="caChua()"> Nước ép cà chua</li>-->
-<!--    <li onclick="caRot()"> Nước ép cà rốt</li>-->
-<!--    <li onclick="nuocLoc()"> Nước lọc</li>-->
-<!--    <li onclick="nuocDua"> Nước dừa</li>-->
-<!--    <li onclick="out()"> Thoát gọi món</li>-->
-</ol>
-    </table>
-</form>
-
 <script>
-    let i = 0;
+    // Bài 1: prefix sum
 
-        function cafe() {
-            document.getElementById('demo').innerHTML = "Cafe có giá là 12k";
-            alert("Bạn muốn order bao nhiêu ly:  ");
-            document.write("Số tiền bạn phải thanh toán là: ");
+    // let number = parseInt(prompt("Bạn muốn nhập bao nhiêu số nguyên: "));
+    // let a = [];
+    // for (let k = 0; k < number; k++ ) {
+    //     a[k] = parseInt(prompt("Các số nguyên trong mảng là: "));
+    // }
+    // // let b = [];
+    // let sum = 0;
+    // for ( let i = 0; i < a.length; i++) {
+    //     sum = sum + a[i];
+    //     a[i] = sum;
+    // }
+    // document.write(a);
 
-        }
+   // Bài 2: In ra một mảng C được sắp xếp các phần tử xuất hiện trong A nhưng không xuất hiện trong B.
 
-        function camVat() {
-            document.getElementById('demo1').innerHTML = "Cam vắt có giá là 20k";
-        }
+    // let arrayB = [];
+    // let arrayA = [];
+    // let result = [];
+    // let sizeA = parseInt(prompt(" Nhap vao do dai mang A: "));
+    // for ( let i = 0; i < sizeA; i++) {
+    //     arrayA.push(parseInt(prompt(" Nhap vao so nguyen trong mang A: ")));
+    // }
+    //
+    // let sizeB = parseInt(prompt(" Nhap vao do dai mang B: "));
+    // for ( let i = 0; i < sizeB; i++) {
+    //     arrayB.push(parseInt(prompt(" Nhap vao so nguyen trong mang B: ")));
+    // }
+    //
+    // for ( let i = 0; i < sizeB; i++) {
+    //     if ( arrayA.indexOf(arrayB[i]) === -1 && result.indexOf(arrayB[i] === -1 )) {
+    //         result.push(arrayB[i]);
+    //     }
+    // }
+    // result.sort(function (a,b) {
+    //     return a - b;
+    // });
+    // document.write("Mang A : " + arrayA);
+    // document.write("<br>");
+    // document.write("Mang B : " + arrayB);
+    // document.write("<br>");
+    // document.write(" Cac so nguyen xuat hien trong mang B nhung k xuat hien trong mang A: " + result);
+
+
+    // Bài 3: Tìm ra phân số lớn nhất, và hiển thị ra chỉ số đó.
+
+    // let numerators = [];
+    // let denominators = [];
+    // let size = parseInt(prompt(" Nhap vao do dai mang cua cac phan so: "));
+    //
+    // for ( let i = 0; i < size; i++) {
+    //     numerators.push(parseInt(prompt("Moi nhap tu so: ")));
+    //     denominators.push(parseInt(prompt("Moi nhap phan so: ")));
+    // }
+    //
+    // function maxFraction(a,b) {
+    //
+    //     let maxIndex = 0;
+    //     for ( let i = 1; i < a.length; i++) {
+    //         if ( a[maxIndex] * b[i] <  a[i] * b[maxIndex]) {
+    //             maxIndex = i;
+    //         }
+    //     }
+    //     return maxIndex;
+    // }
+    // document.write("Chi so lon nhat trong mang la : " + maxFraction(numerators,denominators));
+
+    // Bài 4: Viết một chương trình nhập vào một dãy số từ bàn phím và in ra màn hình bằng chữ.
+
+//     let a = "";
+//  a = parseInt(prompt("mời nhập số: "));
+//  array = a.split('');
+// console.log(array);
+//     let str = prompt("Mời nhập dãy số: ");
+//     let arr = str.split('');
+//     document.write(arr);
+//     document.write("<br>");
+//     for ( let i = 0 ; i <= arr.length; i++) {
+//         switch (arr[i]) {
+//             case ("1"):
+//                 document.write("Một");
+//                 break;
+//             case ('2'):
+//                 document.write("Hai");
+//                 break;
+//             case ('3'):
+//                 document.write("Ba");
+//                 break;
+//             case ('4'):
+//                 document.write("Bốn");
+//                 break;
+//             case ('5'):
+//                 document.write("Năm");
+//                 break;
+//             case ('6'):
+//                 document.write("Sáu");
+//                 break;
+//             case ('7'):
+//                 document.write("Bảy");
+//                 break;
+//             case ('8'):
+//                 document.write("Tám");
+//                 break;
+//             case ('9'):
+//                 document.write("Chín");
+//                 break;
+//         }
+//     }
+
+    // Bai 5: Tạo một menu
+    let menu =("Mời bạn chọn đồ uống \n" +
+        "1.Cafe \n" +
+        "2.Cam vắt \n" +
+        "3.Nước ép cà rốt \n" +
+        "4.Nước ép cà chua \n" +
+        "5.Nước lọc \n" +
+        "6.Nước dừa \n" +
+        "7. Thoát gọi món");
+    let choose;
+    let total = 0;
+    do {
+            choose = parseInt(prompt(menu));
+            let price = 0;
+            let amount = 0;
+
+            switch (choose) {
+                case 1:
+                    price = 10000;
+                    break;
+                case 2:
+                    price = 20000;
+                    break;
+                case 3:
+                    price = 20000;
+                    break;
+                case 4:
+                    price = 20000;
+                    break;
+                case 5:
+                    price = 7000;
+                    break;
+                case 6:
+                    price = 30000;
+                    break;
+                case 7:
+                   continue;
+            }
+            amount = parseInt(prompt("Mời nhập số lượng đồ uống: "));
+            total += amount * price;
+    } while (choose !== 7);
+    document.write("Tổng số tiền người mua phải trả là : " + total);
+
 
 
 </script>

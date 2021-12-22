@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: Viết hàm số tổng các số chẵn trong ma trận có kích thước m * n.
+
+   function creativeMatrix() {
+        let m = parseInt(prompt("Mời nhập vào số dòng của ma trận"));
+        let n = parseInt(prompt("Mời nhập vào số cột của ma trận"));
+        let matrix = [];
+
+        // Tạo ra một bảng gồm m dòng và n cột
+        for ( let i = 0; i < m; i++) {
+            let row = [];
+            for (let j = 0; j < n; j++) {
+                row[j] = parseInt(prompt("Mời nhập số vào ma trận"));
+            }
+            matrix[i] = row;
+        }
+       return matrix;
+   }
+
+
+   // let matrix1 = creativeMatrix();
+   //
+   // function sumEven(matrix) {
+   //     let sum = 0;
+   //     // Sau đó duyệt qua từng dòng để tìm số chẵn và tính tổng
+   //     for (let i = 0; i < matrix.length; i++) {
+   //         for (let j = 0; j < matrix[i].length; j++) {
+   //             if (matrix[i][j] % 2 === 0) {
+   //                 sum = sum + matrix[i][j];
+   //             }
+   //         }
+   //     }
+   //     document.write("Tổng các số chẵn trong mảng 2 chiều có cột là : " + sum);
+   // }
+   // sumEven(matrix1);
+
+    // Bài 2: Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều.
+    //       Đếm các số nguyên tố có trong mảng đó.
+
+
+    // let matrix2 = creativeMatrix();
+    // let sntArr = [];
+    //
+    // function checkSNT(number) {
+    //   if (number < 2) {
+    //       return false;
+    //   }
+    //   for ( let i = 2; i <= Math.sqrt(number); i++) {
+    //       if (number % i === 0) {
+    //           return false;
+    //       }
+    //   }
+    //   return true;
+    // }
+    //
+    // function findSNT(matrix) {
+    //     for (let i = 0; i < matrix.length; i++) {
+    //         for (let j = 0; j < matrix[i].length; j++) {
+    //             if (checkSNT(matrix[i][j])) {
+    //                 sntArr.push(matrix[i][j]);
+    //             }
+    //         }
+    //     }
+    //     document.write(sntArr);
+    // }
+    //
+    // findSNT(matrix2);
+
+
+    // Bài 3 : tìm số lớn nhất và nhỏ nhất trong mảng 2 chiều
+
+    let matrix3 = creativeMatrix()
+
+    function findMaxAndMin(matrix) {
+       let max = matrix[0][0];
+       let min = matrix[0][0];
+       for (let i = 0; i <matrix.length; i++) {
+           for (let j = 0; j < matrix[i].length; j++) {
+                if (max < matrix[i][j]) {
+                    max = matrix[i][j];
+                }
+               if (min > matrix[i][j]) {
+                   min = matrix[i][j];
+               }
+           }
+       }
+       console.table(matrix);
+       alert("Phần tử lớn nhất là : " + max +
+       "\n Phần từ bé nhất là : " + min);
+    }
+
+    findMaxAndMin(matrix3);
+
+</script>
+</body>
+</html>
